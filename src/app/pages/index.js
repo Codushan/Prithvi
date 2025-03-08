@@ -49,7 +49,7 @@ export default function Home() {
             <CompetitionCards />
             <WorkshopCards />
             <LectureCards />
-            <Lecturers />
+            {/* <Lecturers /> */}
           </main>
           <Footer />
         </>

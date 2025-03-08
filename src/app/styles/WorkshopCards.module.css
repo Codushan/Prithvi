@@ -270,6 +270,9 @@
   }
   
   .registerButton, .moreButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 0;
     border-radius: 4px;
     font-weight: 600;
