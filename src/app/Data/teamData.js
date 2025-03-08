@@ -4,13 +4,13 @@
       { name: `Chandrabhushan Kumar`, role: `Tech Lead & UI/UX`, description: `Full-stack developer and Specializes in intuitive interfaces with engineering precision` },
       { name: `Himanshu Raj`, role: `Backend Developer`, description: `Full-stack developer and Data structures & algorithms specialist with civil engineering background` },
       { name: `Ponnala Venkata Padma Kishor`, role: `Developer`, description: `Creates responsive interfaces with architectural influence` },
-      { name: `Ponnala Venkata Padma Kishor`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
-      { name: `Ponnala Venkata Padma Kishor`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
-      { name: `Ponnala Venkata Padma Kishor`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
+      { name: `Arun krishna`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
+      { name: `Krishna Singh`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
+      { name: `Deepak Kumar`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
     ],
     events: [
-      { name: `Rahul Mehra`, role: `Event Coordinator`, description: `Manages all technical events & workshops` },
-      { name: `Divya Sharma`, role: `Workshop Lead`, description: `Organizes hands-on civil engineering workshops` }
+      { name: `Sarvagya Sharama`, role: `Committee Member`, description: `Manages all technical events & workshops` },
+      { name: `Abhijeet Singh`, role: `Committee Member`, description: `Organizes hands-on civil engineering workshops` }
     ],
     marketing: [
       { name: `Karan Malhotra`, role: `Marketing Head`, description: `Promotes Prithvi across engineering colleges` },
