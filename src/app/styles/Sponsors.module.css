@@ -1,0 +1,477 @@
+/* Sponsors.module.css */
+.sponsorsSection {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #121212;
+    color: #f5f5f5;
+    min-height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .bgElements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .bridge {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 20%, #3498db 40%, #3498db 60%, transparent 80%);
+    transform-origin: center;
+    opacity: 0.3;
+  }
+  
+  .bridge::before, .bridge::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 80px;
+    border: 2px solid #3498db;
+    border-bottom: none;
+    border-radius: 100px 100px 0 0;
+    opacity: 0.2;
+  }
+  
+  .bridge::before {
+    left: 20%;
+    animation: bridgeSway 8s ease-in-out infinite;
+  }
+  
+  .bridge::after {
+    left: 40%;
+    animation: bridgeSway 8s ease-in-out infinite reverse;
+  }
+  
+  @keyframes bridgeSway {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.05); }
+  }
+  
+  .pillar {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, #3498db 20%, #3498db 80%, transparent);
+    opacity: 0.2;
+  }
+  
+  .pillar:nth-child(2) {
+    left: 30%;
+    height: 150px;
+    animation: pillarGlow 4s infinite alternate;
+  }
+  
+  .pillar:nth-child(3) {
+    left: 70%;
+    height: 130px;
+    animation: pillarGlow 4s infinite alternate-reverse;
+  }
+  
+  @keyframes pillarGlow {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+  }
+  
+  .girder {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 120%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #2ecc71, transparent);
+    transform: rotate(-5deg);
+    opacity: 0.1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #f5f5f5;
+  }
+  
+  .heading span {
+    color: #3498db;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underline {
+    position: relative;
+    height: 4px;
+    width: 100px;
+    margin: 15px auto;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .underline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .description {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #bbbbbb;
+  }
+  
+  .sponsorTiers {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .tier {
+    position: relative;
+  }
+  
+  .tier h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #2ecc71;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tier h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #2ecc71, transparent);
+    animation: expandWidth 1.5s forwards;
+  }
+  
+  @keyframes expandWidth {
+    from { width: 0; left: 50%; }
+    to { width: 100%; left: 0; }
+  }
+  
+  .sponsorGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  
+  @media (min-width: 576px) {
+    .sponsorGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .tier:nth-child(1) .sponsorGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .tier:nth-child(2) .sponsorGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .tier:nth-child(3) .sponsorGrid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  .sponsorCard {
+    position: relative;
+    background-color: rgba(30, 30, 35, 0.6);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sponsorCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  
+  .sponsorCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .sponsorCard:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .blueprint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .blueprintLines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(rgba(52, 152, 219, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(52, 152, 219, 0.3) 1px, transparent 1px);
+    background-size: 10px 10px;
+  }
+  
+  .logoPlaceholder {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(25, 25, 30, 0.7);
+    z-index: 1;
+  }
+  
+  .beam {
+    position: absolute;
+    width: 80%;
+    height: 6px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 3px;
+    animation: beamPulse 2s infinite alternate;
+  }
+  
+  @keyframes beamPulse {
+    0% { opacity: 0.5; transform: scaleX(0.9); }
+    100% { opacity: 1; transform: scaleX(1); }
+  }
+  
+  .column {
+    position: absolute;
+    width: 6px;
+    height: 60%;
+    background: linear-gradient(to bottom, #3498db, #2ecc71);
+    border-radius: 3px;
+    animation: columnPulse 2s infinite alternate 0.5s;
+  }
+  
+  @keyframes columnPulse {
+    0% { opacity: 0.5; transform: scaleY(0.9); }
+    100% { opacity: 1; transform: scaleY(1); }
+  }
+  
+  .sponsorCard h4 {
+    font-size: 1.3rem;
+    margin: 10px 0 0;
+    color: #f5f5f5;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .sponsorCTA {
+    margin-top: 80px;
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(30, 30, 35, 0.6);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sponsorCTA::before, .sponsorCTA::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.2) 0%, transparent 70%);
+    z-index: 0;
+  }
+  
+  .sponsorCTA::before {
+    top: -80px;
+    left: -80px;
+    animation: pulseGlow 4s infinite;
+  }
+  
+  .sponsorCTA::after {
+    bottom: -80px;
+    right: -80px;
+    animation: pulseGlow 4s infinite 2s;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+  }
+  
+  .sponsorCTA h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #3498db;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .sponsorCTA p {
+    font-size: 1.1rem;
+    color: #bbbbbb;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ctaButton {
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ctaButton:hover::before {
+    left: 100%;
+  }
+  
+  /* Bridge animation for loading */
+  @keyframes bridgeLoad {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  
+  /* Mobile Optimization */
+  @media (max-width: 767px) {
+    .sponsorsSection {
+      padding: 60px 15px;
+    }
+    
+    .heading h2 {
+      font-size: 2rem;
+    }
+    
+    .description p {
+      font-size: 1rem;
+    }
+    
+    .tier h3 {
+      font-size: 1.5rem;
+    }
+    
+    .sponsorCard {
+      padding: 20px 15px;
+    }
+    
+    .logoPlaceholder {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .sponsorCard h4 {
+      font-size: 1.1rem;
+    }
+    
+    .sponsorCTA {
+      padding: 30px 20px;
+    }
+    
+    .sponsorCTA h3 {
+      font-size: 1.5rem;
+    }
+    
+    .sponsorCTA p {
+      font-size: 1rem;
+    }
+  }

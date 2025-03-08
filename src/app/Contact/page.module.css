@@ -1,0 +1,353 @@
+.contactSection {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #121212;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .blueprintCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .contactContainer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .contactHeader {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .sectionTitle {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underline {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(90deg, #34c9eb, #34eb8c);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+  
+  .sectionDesc {
+    font-size: 18px;
+    color: #aaaaaa;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contactContent {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .contactInfo {
+    flex: 1;
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid rgba(52, 201, 235, 0.1);
+    box-shadow: 0 0 20px rgba(52, 201, 235, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contactInfo::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #34c9eb, transparent);
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+  
+  .contactInfo::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #34eb8c, transparent);
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+  
+  .infoItem {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .infoIcon {
+    margin-right: 20px;
+  }
+  
+  .iconCircle {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #34c9eb, #34eb8c);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(52, 201, 235, 0.3);
+  }
+  
+  .iconInner {
+    font-size: 22px;
+  }
+  
+  .infoText h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .infoText p {
+    color: #aaaaaa;
+    line-height: 1.6;
+  }
+  
+  .socialLinks {
+    margin-top: 40px;
+  }
+  
+  .socialLinks h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .socialCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #34c9eb, #34eb8c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .socialCircle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(52, 201, 235, 0.5);
+  }
+  
+  .contactForm {
+    flex: 1.5;
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid rgba(52, 201, 235, 0.1);
+    box-shadow: 0 0 20px rgba(52, 201, 235, 0.1);
+    position: relative;
+  }
+  
+  .contactForm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #34c9eb, #34eb8c, transparent);
+  }
+  
+  .contactForm::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #34eb8c, #34c9eb, transparent);
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+    flex: 1;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .formControl {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(52, 201, 235, 0.2);
+    border-radius: 5px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .formControl:focus {
+    outline: none;
+    border-color: #34c9eb;
+    box-shadow: 0 0 0 2px rgba(52, 201, 235, 0.2);
+  }
+  
+  .formControl::placeholder {
+    color: #666666;
+  }
+  
+  .submitBtn {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #34c9eb, #34eb8c);
+    color: #121212;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .submitBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(52, 201, 235, 0.4);
+  }
+  
+  .submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .btnStructure {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: btnPulse 2s infinite;
+  }
+  
+  @keyframes btnPulse {
+    0% {
+      opacity: 0.3;
+      transform: scaleX(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scaleX(1);
+    }
+    100% {
+      opacity: 0.3;
+      transform: scaleX(0.8);
+    }
+  }
+  
+  .messageSuccess {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(52, 201, 140, 0.1);
+    border-left: 3px solid #34eb8c;
+    color: #34eb8c;
+    border-radius: 4px;
+  }
+  
+  /* Structural elements for civil engineering theme */
+  .contactForm::before,
+  .contactForm::after {
+    transform-origin: center;
+    animation: structuralPulse 4s infinite;
+  }
+  
+  @keyframes structuralPulse {
+    0% {
+      opacity: 0.3;
+      transform: scaleX(0.95);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scaleX(1);
+    }
+    100% {
+      opacity: 0.3;
+      transform: scaleX(0.95);
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 960px) {
+    .contactContent {
+      flex-direction: column;
+    }
+    
+    .formRow {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .sectionTitle {
+      font-size: 32px;
+    }
+    
+    .contactSection {
+      padding: 80px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .socialIcons {
+      flex-wrap: wrap;
+    }
+    
+    .infoItem {
+      flex-direction: column;
+    }
+    
+    .infoIcon {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }

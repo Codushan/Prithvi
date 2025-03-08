@@ -1,0 +1,421 @@
+/* CompetitionCards.module.css */
+.competitionsSection {
+    background-color: #121212;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .competitionsSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #38b2ac, #4299e1, #805ad5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .visible::before {
+    transform: scaleX(1);
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .heading h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(56, 178, 172, 0.3);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .heading h2 span {
+    color: #38b2ac;
+    position: relative;
+  }
+  
+  .heading h2 span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: -8px;
+    left: 0;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(56, 178, 172, 0.5),
+      rgba(56, 178, 172, 0.5) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+  
+  .underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #38b2ac, #4299e1);
+    margin: 15px auto 0;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .underline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .description {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #b3b3b3;
+  }
+  
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .competitionCard {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border-left: 3px solid #38b2ac;
+  }
+  
+  .competitionCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(56, 178, 172, 0.1), transparent);
+    z-index: -1;
+  }
+  
+  .competitionCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  }
+  
+  .competitionCard:hover .beam,
+  .competitionCard:hover .column,
+  .competitionCard:hover .girder {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .structuralElements {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+  }
+  
+  .competitionCard:hover .structuralElements {
+    opacity: 0.25;
+  }
+  
+  .beam {
+    position: absolute;
+    width: 80%;
+    height: 8px;
+    top: 20px;
+    left: 10%;
+    background-color: #38b2ac;
+    transform-origin: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .beam::before, .beam::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background-color: #38b2ac;
+    top: 0;
+  }
+  
+  .beam::before {
+    left: 0;
+    transform: translateY(-16px) rotate(30deg);
+  }
+  
+  .beam::after {
+    right: 0;
+    transform: translateY(-16px) rotate(-30deg);
+  }
+  
+  .column {
+    position: absolute;
+    width: 6px;
+    height: 70%;
+    bottom: 0;
+    left: 20%;
+    background-color: #4299e1;
+    transform-origin: bottom;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .girder {
+    position: absolute;
+    width: 6px;
+    height: 60%;
+    bottom: 0;
+    right: 30%;
+    background-color: #805ad5;
+    transform-origin: bottom;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .girder::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background-color: #805ad5;
+    top: 30%;
+    left: -17px;
+    transform: rotate(45deg);
+  }
+  
+  .cardIcon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .competitionCard h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0 0 15px;
+    position: relative;
+  }
+  
+  .competitionCard h3::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #38b2ac, transparent);
+    bottom: -8px;
+    left: 0;
+  }
+  
+  .competitionCard p {
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 80px;
+  }
+  
+  .prize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border-top: 1px dashed rgba(56, 178, 172, 0.3);
+    border-bottom: 1px dashed rgba(56, 178, 172, 0.3);
+  }
+  
+  .prize span:first-child {
+    color: #a0aec0;
+    font-weight: 500;
+  }
+  
+  .prizeAmount {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #38b2ac;
+    text-shadow: 0 0 5px rgba(56, 178, 172, 0.3);
+  }
+  
+  .exploreButton {
+    width: 100%;
+    padding: 12px 0;
+    background-color: transparent;
+    border: 2px solid #38b2ac;
+    color: #38b2ac;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .exploreButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #38b2ac;
+    z-index: -1;
+    transition: width 0.3s ease;
+  }
+  
+  .exploreButton:hover {
+    color: #121212;
+  }
+  
+  .exploreButton:hover::before {
+    width: 100%;
+  }
+  
+  .viewAllContainer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .viewAllButton {
+    background: transparent;
+    border: none;
+    color: #38b2ac;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .viewAllButton::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #38b2ac, #4299e1);
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .viewAllButton svg {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .viewAllButton:hover {
+    color: #f0f0f0;
+  }
+  
+  .viewAllButton:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .viewAllButton:hover svg {
+    transform: translateX(5px);
+  }
+  
+  /* Bridge-like pattern at the bottom of the section */
+  .competitionsSection::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-image: 
+      linear-gradient(90deg, #121212 0%, #121212 25%, 
+                     transparent 25%, transparent 75%, #121212 75%),
+      linear-gradient(90deg, #38b2ac 0%, #38b2ac 10%, 
+                     transparent 10%, transparent 90%, #38b2ac 90%);
+    background-size: 100px 100%, 50px 100%;
+    background-position: 0 0, 25px 0;
+    opacity: 0.4;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .competitionsSection {
+      padding: 60px 15px;
+    }
+    
+    .heading h2 {
+      font-size: 1.8rem;
+    }
+    
+    .cardsContainer {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .competitionCard p {
+      min-height: auto;
+    }
+    
+    .competitionCard {
+      padding: 25px;
+    }
+  }

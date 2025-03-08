@@ -1,0 +1,88 @@
+.loadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  
+  /* Bridge structure elements that appear during loading */
+  .loadingContainer::before,
+  .loadingContainer::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #34c9eb, #34eb8c, transparent);
+    animation: bridgeBeamAnimation 3s infinite;
+  }
+  
+  .loadingContainer::before {
+    top: 30%;
+    width: 60%;
+    transform: skewY(2deg);
+  }
+  
+  .loadingContainer::after {
+    bottom: 30%;
+    width: 60%;
+    transform: skewY(-2deg);
+  }
+  
+  /* Cable-stay effect for the bridge */
+  .loadingContainer::before {
+    box-shadow: 0 -15px 0 rgba(52, 152, 219, 0.2),
+                0 -30px 0 rgba(52, 152, 219, 0.1),
+                0 -45px 0 rgba(52, 152, 219, 0.05);
+  }
+  
+  .loadingContainer::after {
+    box-shadow: 0 15px 0 rgba(52, 152, 219, 0.2),
+                0 30px 0 rgba(52, 152, 219, 0.1),
+                0 45px 0 rgba(52, 152, 219, 0.05);
+  }
+  
+  @keyframes bridgeBeamAnimation {
+    0% {
+      opacity: 0.3;
+      transform: scaleX(0.85) skewY(2deg);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scaleX(1) skewY(0deg);
+    }
+    100% {
+      opacity: 0.3;
+      transform: scaleX(0.85) skewY(2deg);
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .loadingContainer::before,
+    .loadingContainer::after {
+      width: 80%;
+    }
+    
+    .loadingContainer::before {
+      top: 35%;
+    }
+    
+    .loadingContainer::after {
+      bottom: 35%;
+    }
+  }

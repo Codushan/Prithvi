@@ -1,0 +1,374 @@
+/* styles/Landing.module.css */
+.landingContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    z-index: 12;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(15, 15, 19, 0) 0%, rgba(10, 10, 15, 0.9) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .bridge {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .bridge:nth-child(2) {
+    width: 30%;
+    height: 30%;
+    top: 20%;
+    right: 10%;
+    background-image: url('/images/bridge1.svg');
+    animation-delay: 0.3s;
+  }
+  
+  .bridge:nth-child(3) {
+    width: 40%;
+    height: 40%;
+    bottom: 15%;
+    left: 5%;
+    background-image: url('/images/bridge2.svg');
+    animation-delay: 0.6s;
+  }
+  
+  .bridge:nth-child(4) {
+    width: 25%;
+    height: 25%;
+    top: 10%;
+    left: 15%;
+    background-image: url('/images/bridge3.svg');
+    animation-delay: 0.9s;
+  }
+  
+  .building {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .building:nth-child(5) {
+    width: 35%;
+    height: 35%;
+    bottom: 10%;
+    right: 5%;
+    background-image: url('/images/building1.svg');
+    animation-delay: 1.2s;
+  }
+  
+  .building:nth-child(6) {
+    width: 25%;
+    height: 25%;
+    top: 25%;
+    left: 20%;
+    background-image: url('/images/building2.svg');
+    animation-delay: 1.5s;
+  }
+  
+  .building:nth-child(7) {
+    width: 30%;
+    height: 30%;
+    top: 40%;
+    right: 20%;
+    background-image: url('/images/building3.svg');
+    animation-delay: 1.8s;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    padding: 0 2rem;
+  }
+  
+  .title {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0;
+    opacity: 0;
+    background: linear-gradient(90deg, #FF5E7D, #FF9671, #FFC75F, #F9F871, #4FC1E9, #A084DC);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+    animation: titleIn 1s cubic-bezier(0.37, 0, 0.63, 1) forwards, gradientShift 8s ease infinite;
+    filter: drop-shadow(0 0 15px rgba(79, 193, 233, 0.5));
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: #E0E0E0;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.7s;
+    letter-spacing: 2px;
+  }
+  
+  .date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0 2rem;
+    color: #4FC1E9;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 1s;
+    padding: 0.5rem 2rem;
+    border: 1px solid rgba(79, 193, 233, 0.3);
+    border-radius: 50px;
+    background: rgba(79, 193, 233, 0.05);
+  }
+  
+  .ctaButtons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 1.3s;
+  }
+  
+  .primaryBtn {
+    background: linear-gradient(45deg, #4FC1E9, #A084DC, #FF9671);
+    background-size: 200% 200%;
+    color: #FFFFFF;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(79, 193, 233, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    animation: gradientShift 6s ease infinite;
+  }
+  
+  .primaryBtn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(160, 132, 220, 0.4);
+  }
+  
+  .primaryBtn:active {
+    transform: translateY(1px) scale(0.98);
+  }
+  
+  .secondaryBtn {
+    background: transparent;
+    color: #FFFFFF;
+    padding: 1rem 2.5rem;
+    border: 2px solid #4FC1E9;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .secondaryBtn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(79, 193, 233, 0.1), rgba(160, 132, 220, 0.1));
+    transition: all 0.4s ease;
+    z-index: -1;
+  }
+  
+  .secondaryBtn:hover {
+    color: #4FC1E9;
+    transform: translateY(-3px);
+    border-color: #A084DC;
+  }
+  
+  .secondaryBtn:hover:before {
+    width: 100%;
+  }
+  
+  .secondaryBtn:active {
+    transform: translateY(1px);
+  }
+  
+  .scrollIndicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #E0E0E0;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 2s;
+    z-index: 3;
+  }
+  
+  .scrollIndicator span {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .arrow {
+    width: 25px;
+    height: 25px;
+    border-right: 2px solid #4FC1E9;
+    border-bottom: 2px solid #4FC1E9;
+    transform: rotate(45deg);
+    animation: arrowBounce 2s infinite;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes titleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(-50px);
+      letter-spacing: 20px;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      letter-spacing: 5px;
+    }
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes arrowBounce {
+    0%, 100% {
+      transform: rotate(45deg) translate(0, 0);
+    }
+    50% {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 3.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .ctaButtons {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+    
+    .primaryBtn, .secondaryBtn {
+      width: 100%;
+      padding: 1.2rem;
+    }
+    
+    .bridge, .building {
+      transform: scale(0.8);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 2.8rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .date {
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+  
+  @keyframes bgPulse {
+    0% {
+      background-size: 100% 100%;
+    }
+    50% {
+      background-size: 120% 120%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+  
+  @keyframes blueprintReveal {
+    0% {
+      opacity: 0;
+      filter: brightness(0) saturate(0);
+    }
+    100% {
+      opacity: 0.15;
+      filter: brightness(1) saturate(1);
+    }
+  }

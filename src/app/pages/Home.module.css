@@ -1,0 +1,13 @@
+/* Prithvi'25 Website Styles */
+
+/* styles/Home.module.css */
+.container {
+  background-color: #121212;
+  color: #f5f5f5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+}

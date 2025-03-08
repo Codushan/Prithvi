@@ -1,0 +1,378 @@
+/* Lecturers.module.css */
+.lecturersSection {
+    padding: 80px 20px;
+    background-color: #121212;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .lecturersSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .structuralBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .structuralBg .pillar {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(66, 165, 245, 0.05), transparent);
+    border-left: 2px solid rgba(66, 165, 245, 0.1);
+    border-right: 2px solid rgba(66, 165, 245, 0.1);
+  }
+  
+  .structuralBg .pillar:first-child {
+    left: 15%;
+  }
+  
+  .structuralBg .pillar:last-child {
+    right: 15%;
+  }
+  
+  .structuralBg .beam {
+    position: absolute;
+    height: 20px;
+    width: 70%;
+    left: 15%;
+    top: 20%;
+    background: linear-gradient(to right, transparent, rgba(76, 175, 80, 0.05), transparent);
+    border-top: 2px solid rgba(76, 175, 80, 0.1);
+    border-bottom: 2px solid rgba(76, 175, 80, 0.1);
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 3px;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+  }
+  
+  .heading span {
+    color: #4CAF50;
+    position: relative;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #2196F3);
+    margin: 15px auto;
+    position: relative;
+  }
+  
+  .underline::before, .underline::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #2196F3;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .underline::before {
+    left: -6px;
+  }
+  
+  .underline::after {
+    right: -6px;
+  }
+  
+  .description {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .description p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .lecturersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .lecturerProfile {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transform: translateY(50px) scale(0.9);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                opacity 0.6s ease,
+                box-shadow 0.4s ease;
+  }
+  
+  .lecturerProfile.show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  
+  .lecturerProfile:hover {
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.2);
+    transform: translateY(-10px);
+  }
+  
+  .structuralElement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .structuralElement .column {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4CAF50, #2196F3);
+    border-radius: 3px;
+    opacity: 0.5;
+  }
+  
+  .structuralElement .beam {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    opacity: 0.5;
+  }
+  
+  .imageContainer {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    background-color: #252525;
+  }
+  
+  .imageContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(76, 175, 80, 0.05),
+      rgba(76, 175, 80, 0.05) 10px,
+      rgba(33, 150, 243, 0.05) 10px,
+      rgba(33, 150, 243, 0.05) 20px
+    );
+    z-index: 1;
+  }
+  
+  .imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #252525, #1a1a1a);
+    position: relative;
+  }
+  
+  .imagePlaceholder::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    border: 3px solid #4CAF50;
+  }
+  
+  .profileInfo {
+    padding: 25px 20px;
+    position: relative;
+  }
+  
+  .profileInfo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4CAF50, transparent);
+  }
+  
+  .profileInfo h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  
+  .profileInfo h4 {
+    color: #4CAF50;
+    font-size: 1rem;
+    margin: 0 0 8px;
+    font-weight: 500;
+  }
+  
+  .organization {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin: 0 0 15px;
+  }
+  
+  .specialization {
+    background-color: #252525;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .specialization span:first-child {
+    color: #2196F3;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .specialization span:last-child {
+    color: #ffffff;
+    font-size: 0.95rem;
+  }
+  
+  .viewProfileButton {
+    width: 100%;
+    padding: 12px 0;
+    background-color: transparent;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .viewProfileButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+  }
+  
+  .viewProfileButton:hover {
+    color: #ffffff;
+    background-color: #4CAF50;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+  }
+  
+  .viewProfileButton:hover::before {
+    left: 100%;
+  }
+  
+  /* Animation for structural elements */
+  @keyframes beamLoad {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes columnLoad {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 0.5;
+    }
+  }
+  
+  .lecturerProfile.show .structuralElement .beam {
+    transform-origin: left;
+    animation: beamLoad 0.6s ease-out forwards;
+  }
+  
+  .lecturerProfile.show .structuralElement .column {
+    transform-origin: top;
+    animation: columnLoad 0.6s ease-out 0.3s forwards;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .heading h2 {
+      font-size: 2rem;
+    }
+    
+    .lecturersGrid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .structuralBg .pillar:first-child {
+      left: 5%;
+    }
+    
+    .structuralBg .pillar:last-child {
+      right: 5%;
+    }
+    
+    .structuralBg .beam {
+      width: 90%;
+      left: 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lecturersGrid {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,456 @@
+.teamSection {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #121212;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .structuralCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .teamContainer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .sectionTitle {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .titleUnderline {
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(90deg, #34c9eb, #34eb8c);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+  
+  .sectionDesc {
+    font-size: 18px;
+    color: #aaaaaa;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Team tabs */
+  .teamTabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .teamTabs::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(52, 201, 235, 0.3), transparent);
+  }
+  
+  .teamTab {
+    padding: 15px 25px;
+    margin: 0 5px;
+    color: #aaaaaa;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .teamTab:hover {
+    color: #ffffff;
+  }
+  
+  .tabIndicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #34c9eb, #34eb8c);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .activeTab {
+    color: #ffffff;
+  }
+  
+  .activeTab .tabIndicator {
+    transform: scaleX(1);
+  }
+  
+  /* Team grid */
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 30px;
+  }
+  
+  .teamCard {
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(52, 201, 235, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    animation: cardAppear 0.5s forwards;
+    opacity: 0;
+  }
+  
+  @keyframes cardAppear {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .teamCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 201, 235, 0.2);
+  }
+  
+  /* Special Tech team card */
+  .techCard {
+    border: 1px solid rgba(52, 201, 235, 0.3);
+    background-color: rgba(28, 28, 35, 0.9);
+    box-shadow: 0 5px 20px rgba(52, 201, 235, 0.15);
+    animation: techCardAppear 0.6s forwards cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  @keyframes techCardAppear {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .techCard:hover {
+    box-shadow: 0 10px 30px rgba(52, 201, 235, 0.3);
+  }
+  
+  .techCard::before, 
+  .techCard::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(52, 201, 235, 0.2), transparent);
+    height: 1px;
+  }
+  
+  .techCard::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: scanline 3s infinite linear;
+  }
+  
+  .techCard::after {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    animation: scanline 3s infinite linear reverse;
+  }
+  
+  @keyframes scanline {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Member avatar */
+  .memberAvatar {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatarStructure {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(52, 201, 235, 0.2), rgba(52, 235, 140, 0.2));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(52, 201, 235, 0.1);
+  }
+  
+  .techCard .avatarStructure {
+    background: linear-gradient(45deg, rgba(52, 201, 235, 0.3), rgba(52, 235, 140, 0.3));
+    box-shadow: 0 5px 20px rgba(52, 201, 235, 0.2);
+    animation: pulse 3s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(52, 201, 235, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(52, 201, 235, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(52, 201, 235, 0);
+    }
+  }
+  
+  .bridgeElement {
+    position: absolute;
+    background: linear-gradient(90deg, #34c9eb, #34eb8c);
+    height: 2px;
+    width: 60%;
+    left: 20%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .techCard .bridgeElement {
+    animation: bridgeExpand 3s infinite alternate;
+  }
+  
+  @keyframes bridgeExpand {
+    from {
+      width: 40%;
+      left: 30%;
+    }
+    to {
+      width: 70%;
+      left: 15%;
+    }
+  }
+  
+  .bridgeElement:nth-child(1) {
+    top: 30%;
+    transform: rotate(-10deg);
+  }
+  
+  .bridgeElement:nth-child(2) {
+    top: 50%;
+  }
+  
+  .bridgeElement:nth-child(3) {
+    top: 70%;
+    transform: rotate(10deg);
+  }
+  
+  .techCard:hover .bridgeElement {
+    width: 70%;
+    left: 15%;
+    opacity: 1;
+  }
+  
+  .memberInitials {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(52, 201, 235, 0.2);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .techCard .memberInitials {
+    background-color: rgba(52, 201, 235, 0.4);
+    box-shadow: 0 0 10px rgba(52, 201, 235, 0.5);
+  }
+  
+  .memberInitials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+  
+  /* Member info */
+  .memberInfo {
+    text-align: center;
+  }
+  
+  .memberName {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .techCard .memberName {
+    color: #34c9eb;
+    text-shadow: 0 0 10px rgba(52, 201, 235, 0.3);
+  }
+  
+  .memberRole {
+    font-size: 16px;
+    color: #34eb8c;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .memberDesc {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.5;
+  }
+  
+  /* Tech specific details */
+  .techDetails {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(52, 201, 235, 0.2);
+  }
+  
+  .techSkills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .techSkill {
+    width: 40px;
+    height: 8px;
+    background: linear-gradient(90deg, #34c9eb, #34eb8c);
+    border-radius: 4px;
+    opacity: 0.7;
+    animation: skillPulse 2s infinite alternate;
+  }
+  
+  .techSkill:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .techSkill:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes skillPulse {
+    from {
+      opacity: 0.4;
+      transform: scaleX(0.8);
+    }
+    to {
+      opacity: 0.9;
+      transform: scaleX(1.1);
+    }
+  }
+  
+  /* Corner structure for tech cards */
+  .cornerStructure {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+  }
+  
+  .cornerStructure::before,
+  .cornerStructure::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #34c9eb, #34eb8c);
+  }
+  
+  .cornerStructure::before {
+    width: 2px;
+    height: 30px;
+    right: 10px;
+    bottom: 0;
+  }
+  
+  .cornerStructure::after {
+    width: 30px;
+    height: 2px;
+    right: 0;
+    bottom: 10px;
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 960px) {
+    .teamTabs {
+      flex-wrap: wrap;
+    }
+    
+    .teamTab {
+      margin-bottom: 10px;
+    }
+    
+    .sectionTitle {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .teamSection {
+      padding: 80px 15px;
+    }
+    
+    .teamGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .teamTab {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
