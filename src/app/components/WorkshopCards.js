@@ -96,7 +96,6 @@ const WorkshopCards = () => {
             </div>
             
             <div className={styles.cardFooter}>
-              <button className={styles.registerButton}>Register</button>
               {/* <button className={styles.moreButton}>More Details</button> */}
 
             <Link href={`/RegistrationForm?topic=${encodeURIComponent(workshop.title)}&event=Workshop`}><button className={styles.registerButton}>Register</button></Link>

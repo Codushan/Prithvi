@@ -65,7 +65,6 @@ const CompetitionCards = () => {
               <span>Prize Pool:</span>
               <span className={styles.prizeAmount}>{competition.prize}</span>
             </div>
-            <button className={styles.exploreButton}>Register</button>
 
             <Link href={`/RegistrationForm?topic=${encodeURIComponent(competition.title)}&event=Competition`}><button className={styles.exploreButton}>Register</button></Link>
       

@@ -204,9 +204,16 @@
     to { width: 100%; left: 0; }
   }
   
-  .sponsorGrid {
+  /* .sponsorGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  } */
+
+  .sponsorGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
   }
   
@@ -216,7 +223,7 @@
     }
   }
   
-  @media (min-width: 992px) {
+  /* @media (min-width: 992px) {
     .tier:nth-child(1) .sponsorGrid {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -228,13 +235,13 @@
     .tier:nth-child(3) .sponsorGrid {
       grid-template-columns: repeat(5, 1fr);
     }
-  }
+  } */
   
   .sponsorCard {
     position: relative;
     background-color: rgba(30, 30, 35, 0.6);
     border-radius: 10px;
-    padding: 30px 20px;
+    padding: 50px 100px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
