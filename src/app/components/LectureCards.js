@@ -52,7 +52,11 @@ const LectureCards = () => {
       <div className={styles.cardsContainer}>
         {lectures.map((lecture) => (
           <div key={lecture.id} className={styles.lectureCard}>
-            <Image src={lecture.img} alt="Lecture Image" width={400} height={400} />
+            
+            <div className={styles.imagine}>
+            <Image src={lecture.img} alt="Lecture Image" width={320} height={320} />
+            </div>
+            
             <div className={styles.structuralElements}>
               <div className={styles.column}></div>
               <div className={styles.arch}></div>

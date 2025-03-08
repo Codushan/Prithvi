@@ -295,7 +295,7 @@
   
   .logoPlaceholder {
     position: relative;
-    width: 120px;
+    width: 160px;
     height: 120px;
     margin-bottom: 15px;
     display: flex;
@@ -462,8 +462,8 @@
     }
     
     .logoPlaceholder {
-      width: 100px;
-      height: 100px;
+      width: 160px;
+      height: 140px;
     }
     
     .sponsorCard h4 {

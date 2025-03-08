@@ -384,3 +384,10 @@
     transform-origin: left;
     animation: bridgeLoad 1.5s ease-in-out forwards;
   }
+  
+  .imagine{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

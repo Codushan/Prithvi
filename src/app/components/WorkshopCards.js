@@ -52,7 +52,11 @@ const WorkshopCards = () => {
       <div className={styles.cardsContainer}>
         {workshops.map((workshop) => (
           <div key={workshop.id} className={styles.workshopCard}>
-            <Image src={workshop.img} alt={workshop.title} width={400} height={400} />
+            
+            <div className={styles.imagine}>
+            <Image src={workshop.img} alt={workshop.title} width={320} height={320} />
+            </div>
+            
             <div className={styles.cardHeader}>
               <div className={styles.structuralElements}>
                 <div className={styles.truss}></div>

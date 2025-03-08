@@ -111,9 +111,12 @@
   
   .logo {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 300px;
     height: 300px;
-    transform: translate(-15vw, -10vh);
+    /* transform: translate(-15vw, -10vh); */
 
   }
   

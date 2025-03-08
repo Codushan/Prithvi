@@ -416,6 +416,13 @@
     }
     
     .competitionCard {
-      padding: 25px;
+    padding: 25px;
     }
+  }
+
+  .imagine{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
