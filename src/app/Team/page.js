@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import styles from './page.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import teamData from '../Data/teamdata';
+import teamData from '../Data/teamData';
 const OurTeam = () => {
   const [activeTab, setActiveTab] = useState(`tech`);
   const canvasRef = useRef(null);
