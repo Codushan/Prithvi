@@ -1,5 +1,6 @@
 .holographicCity {
     position: absolute;
+    margin-top: 4rem;
     inset: 0;
     width: 99vw;
     height: 100vh;
