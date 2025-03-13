@@ -128,10 +128,7 @@ function RegistrationFormContent() {
       return;
     }
     
-    if (formData.mobileNumber === formData.whatsappNumber) {
-      alert("Primary and alternate numbers should be different.");
-      return;
-    }
+    
     
     setCurrentStep('payment');
   };
