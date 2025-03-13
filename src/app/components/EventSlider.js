@@ -8,44 +8,44 @@ const EventSlider = () => {
   const events = [
     {
       id: 1,
-      title: "Bridge Design Competition",
+      title: "Starting Soon",
       image: "/images/bridge.jpg",
-      time: "15 March, 10:00 AM",
-      venue: "Main Auditorium",
-      status: "Live"
+      time: "22 March, 9:00 AM",
+      venue: "NIT Calicut",
+      status: "Not Live"
     },
-    {
-      id: 2,
-      title: "Surveying Challenge",
-      image: "/images/survey.jpg",
-      time: "15 March, 2:00 PM",
-      venue: "Engineering Ground",
-      status: "Upcoming"
-    },
-    {
-      id: 3,
-      title: "Concrete Canoe Race",
-      image: "/images/canoe.jpg",
-      time: "16 March, 9:00 AM",
-      venue: "University Lake",
-      status: "Upcoming"
-    },
-    {
-      id: 4,
-      title: "Earthquake Resistant Building",
-      image: "/images/earthquake.jpg",
-      time: "16 March, 3:00 PM",
-      venue: "Structures Lab",
-      status: "Upcoming"
-    },
-    {
-      id: 5,
-      title: "Structural Engineering Hackathon",
-      image: "/images/hackathon.jpg",
-      time: "17 March, 10:00 AM",
-      venue: "Innovation Center",
-      status: "Upcoming"
-    }
+    // {
+    //   id: 2,
+    //   title: "Surveying Challenge",
+    //   image: "/images/survey.jpg",
+    //   time: "15 March, 2:00 PM",
+    //   venue: "Engineering Ground",
+    //   status: "Upcoming"
+    // },
+    // {
+    //   id: 3,
+    //   title: "Concrete Canoe Race",
+    //   image: "/images/canoe.jpg",
+    //   time: "16 March, 9:00 AM",
+    //   venue: "University Lake",
+    //   status: "Upcoming"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Earthquake Resistant Building",
+    //   image: "/images/earthquake.jpg",
+    //   time: "16 March, 3:00 PM",
+    //   venue: "Structures Lab",
+    //   status: "Upcoming"
+    // },
+    // {
+    //   id: 5,
+    //   title: "Structural Engineering Hackathon",
+    //   image: "/images/hackathon.jpg",
+    //   time: "17 March, 10:00 AM",
+    //   venue: "Innovation Center",
+    //   status: "Upcoming"
+    // }
   ];
   
   useEffect(() => {
