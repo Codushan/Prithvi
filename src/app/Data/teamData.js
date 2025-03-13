@@ -13,12 +13,12 @@
       { name: `Abhijeet Singh`, role: `Committee Member`, description: `Organizes hands-on civil engineering workshops` }
     ],
     marketing: [
-      { name: `Karan Malhotra`, role: `Marketing Head`, description: `Promotes Prithvi across engineering colleges` },
-      { name: `Aisha Khan`, role: `Social Media Manager`, description: `Creates engaging content for all platforms` }
+      { name: `*********`, role: `Marketing Head`, description: `Promotes Prithvi across engineering colleges` },
+      { name: `*********`, role: `Social Media Manager`, description: `Creates engaging content for all platforms` }
     ],
     sponsors: [
-      { name: `Rohan Verma`, role: `Sponsorship Lead`, description: `Connects with industry partners for collaboration` },
-      { name: `Lakshmi Iyer`, role: `Industry Relations`, description: `Builds relationships with civil engineering firms` }
+      { name: `*********`, role: `Sponsorship Lead`, description: `Connects with industry partners for collaboration` },
+      { name: `*********`, role: `Industry Relations`, description: `Builds relationships with civil engineering firms` }
     ]
   };
 
