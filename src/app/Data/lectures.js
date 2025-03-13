@@ -1,4 +1,5 @@
 const lectures = [
+
   {
     id: 1,
     img: "",
@@ -11,5 +12,6 @@ const lectures = [
   },
   
 ];
+
 
 export default lectures;

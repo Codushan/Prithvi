@@ -1,4 +1,5 @@
 const workshops = [
+
   {
     id: 1,
     img: "/lecture1.jpg",

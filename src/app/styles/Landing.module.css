@@ -317,7 +317,29 @@
   }
   
   .subtitle {
-    font-size: 1.5rem;
+
+
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: #ffffff;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+    opacity: 100%;
+    animation: fadeUp 1s ease forwards 0.7s;
+    letter-spacing: 2px;
+  }
+  
+  .date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0 2rem;
+    color: #ffffff;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 1s;
+    padding: 0.5rem 2rem;
+    border: 1px solid rgba(79, 193, 233, 0.3);
+    border-radius: 50px;
+    background: rgba(79, 193, 233, 0.5);
   }
   
   .ctaButtons {
