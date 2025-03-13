@@ -1,5 +1,6 @@
 "use client"
 import { useState, useRef, useEffect } from 'react';
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import styles from './page.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -138,11 +139,11 @@ const Contact = () => {
               </div>
               <div className={styles.infoText}>
                 <h3>Our Location</h3>
-                <p>Civil Engineering Department<br />University Campus<br />New Delhi, India</p>
+                <p>Civil Engineering Department<br />NIT Calicut<br />Kozhikode, 673601<br/> Kerala, India</p>
               </div>
             </div>
             
-            <div className={styles.infoItem}>
+            {/* <div className={styles.infoItem}>
               <div className={styles.infoIcon}>
                 <div className={styles.iconCircle}>
                   <span className={styles.iconInner}>📧</span>
@@ -152,7 +153,7 @@ const Contact = () => {
                 <h3>Email Us</h3>
                 <p>info@prithvi25.org<br />support@prithvi25.org</p>
               </div>
-            </div>
+            </div> */}
             
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>
@@ -162,25 +163,23 @@ const Contact = () => {
               </div>
               <div className={styles.infoText}>
                 <h3>Call Us</h3>
-                <p>+91 98765 43210<br />+91 12345 67890</p>
+                <p>Sarvagya Sharma<br />+91 86900 60067</p>
+                <p>Swathi Krishna<br />+91 889434 91339</p>
               </div>
             </div>
             
             <div className={styles.socialLinks}>
               <h3>Connect With Us</h3>
               <div className={styles.socialIcons}>
-                <a href="#" className={styles.socialIcon}>
-                  <div className={styles.socialCircle}>FB</div>
+                <a href="https://www.instagram.com/prithvi_nitcalicut?igsh=N3FqY2k1cm1pZXlx" className={styles.socialIcon}>
+                  <div className={styles.socialCircle}><FaInstagram/></div>
                 </a>
-                <a href="#" className={styles.socialIcon}>
-                  <div className={styles.socialCircle}>IG</div>
+                <a href="https://www.facebook.com/Prithvi2k19/" className={styles.socialIcon}>
+                  <div className={styles.socialCircle}><FaFacebook/></div>
                 </a>
-                <a href="#" className={styles.socialIcon}>
-                  <div className={styles.socialCircle}>TW</div>
-                </a>
-                <a href="#" className={styles.socialIcon}>
-                  <div className={styles.socialCircle}>LI</div>
-                </a>
+                {/* <a href="#" className={styles.socialIcon}>
+                  <div className={styles.socialCircle}><FaLinkedin/></div>
+                </a> */}
               </div>
             </div>
           </div>

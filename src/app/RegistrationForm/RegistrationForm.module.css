@@ -396,7 +396,7 @@
   }
   
   /* Steel button with gradient */
-  .payButton, .submitButton {
+  .payButton, .submitButton,.resubmitButton {
     width: 100%;
     padding: 0.75rem;
     border: none;
@@ -412,7 +412,7 @@
   }
   
   /* Steel bolt decoration in button */
-  .payButton::before, .submitButton::before {
+  .payButton::before, .submitButton::before,.resubmitButton::before {
     content: '';
     position: absolute;
     top: 8px;
@@ -428,16 +428,16 @@
       calc(100% - 16px) calc(100% - 16px) 0 1px rgba(255, 255, 255, 0.3);
   }
   
-  .payButton:hover, .submitButton:hover {
+  .payButton:hover, .submitButton:hover ,.resubmitButton:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(42, 117, 252, 0.3);
   }
   
-  .payButton:active, .submitButton:active {
+  .payButton:active, .submitButton:active, .resubmitButton:active {
     transform: translateY(0);
   }
   
-  .payButton::after, .submitButton::after {
+  .payButton::after, .submitButton::after, .resubmitButton::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -451,7 +451,7 @@
     transform-origin: 50% 50%;
   }
   
-  .payButton:focus::after, .submitButton:focus::after {
+  .payButton:focus::after, .submitButton:focus::after, .resubmitButton:focus::after {
     animation: ripple 1s ease-out;
   }
   
@@ -550,36 +550,27 @@
     z-index: 1;
   }
   
-  .qrInner {
+  
+  
+  .qrImage {
     width: 100%;
     height: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 5px;
+    object-fit: contain;
   }
   
-  .qrPattern {
-    background-color: black;
-    border-radius: 2px;
+  .scanText {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
   }
   
-  .qrInner div:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
-  .qrInner div:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
-  .qrInner div:nth-child(3) { grid-area: 2 / 1 / 3 / 2; }
-  .qrInner div:nth-child(4) { grid-area: 1 / 4 / 2 / 5; }
-  .qrInner div:nth-child(5) { grid-area: 1 / 5 / 2 / 6; }
-  .qrInner div:nth-child(6) { grid-area: 2 / 5 / 3 / 6; }
-  .qrInner div:nth-child(7) { grid-area: 4 / 1 / 5 / 2; }
-  .qrInner div:nth-child(8) { grid-area: 5 / 1 / 6 / 2; }
-  .qrInner div:nth-child(9) { grid-area: 5 / 2 / 6 / 3; }
-  .qrInner div:nth-child(10) { grid-area: 3 / 3 / 4 / 4; }
-  .qrInner div:nth-child(11) { grid-area: 4 / 4 / 5 / 5; }
-  .qrInner div:nth-child(12) { grid-area: 4 / 5 / 5 / 6; }
-  .qrInner div:nth-child(13) { grid-area: 5 / 4 / 6 / 5; }
-  .qrInner div:nth-child(14) { grid-area: 2 / 2 / 3 / 4; }
-  .qrInner div:nth-child(15) { grid-area: 3 / 4 / 4 / 5; }
+  .upiId {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  
+ 
   
   .scanText {
     font-size: 1.2rem;

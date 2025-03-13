@@ -1,34 +1,15 @@
 const workshops = [
-    {
-      id: 1,
-      img: "/lecture1.jpg",
-      title: "Advanced Structural Analysis",
-      description: "Learn to use modern software tools for complex structural analysis and design optimization.",
-      date: "15 March, 2025",
-      duration: "6 hours",
-      instructor: "Dr. Rajesh Verma",
-      seats: 40
-    },
-    {
-      id: 2,
-      img: "/lecture1.jpg",
-      title: "Building Information Modeling",
-      description: "Hands-on workshop on BIM tools and their application in civil engineering projects.",
-      date: "16 March, 2025",
-      duration: "8 hours",
-      instructor: "Prof. Ananya Shah",
-      seats: 35
-    },
-    {
-      id: 3,
-      img: "/lecture1.jpg",
-      title: "Sustainable Construction Techniques",
-      description: "Explore eco-friendly materials and methods for sustainable building design and construction.",
-      date: "17 March, 2025",
-      duration: "4 hours",
-      instructor: "Er. Vikram Mehta",
-      seats: 45
-    }
-  ];
+  {
+    id: 1,
+    img: "/lecture1.jpg",
+    title: "THE SKY'S THE LIMIT: DRONE IN ACTION",
+    description: "Unlock the future of Drone Technology with Prithvi! 🚀✨. From disaster management to infrastructure monitoring, discover how drones are changing industries. 🏗🌍 Get hands-on experience in photogrammetry, GIS mapping, and drone data processing. 🛰📊Learn to integrate drone-generated data into GIS for better decision-making and master drone piloting with a simulator! 🎮🛸",
+    date: "22 March, 2025",
+    duration: "11-12:45 AM and 2:30-4 PM",
+    instructor: "ARSHIF THUMBIL and SIRAJUDHEEN N",
+    seats: 40
+  },
+  
+];
 
-  export default workshops;
+export default workshops;

@@ -20,19 +20,21 @@ export async function POST(request, { params }) {
     }
 
     let id;
-    if (topic === "Future of Smart Infrastructure") {
+    if (topic === "Model Masters") {
       id = process.env.GOOGLE_SHEET_ID;
-    } else if (topic === "Advanced Structural Analysis") {
+    } else if (topic === "THE SKY'S THE LIMIT: DRONE IN ACTION") {
       id = process.env.WORKSHOP_SHEET_ID;
-    } else {
+    } else if (topic === "Treasure Hunt"){
       id = process.env.GOOGLE_SHEET_ID2;
+    }else if (topic === "Infranova"){
+      id = process.env.GOOGLE_SHEET_ID3;
     }
 
     const formData = await request.formData();
     const name = formData.get("name");
     const email = formData.get("email");
-    const number = formData.get("number");
-    const alternateNumber = formData.get("alternateNumber");
+    const mobileNumber = formData.get("mobileNumber");
+    const whatsappNumber = formData.get("whatsappNumber");
     const instituteId = formData.get("instituteId");
     const instituteName = formData.get("instituteName");
     const paymentProof = formData.get("paymentProof");
@@ -73,8 +75,8 @@ export async function POST(request, { params }) {
           [
             name,
             email,
-            number,
-            alternateNumber,
+            mobileNumber,
+            whatsappNumber,
             instituteId,
             instituteName,
             imageUrl,
