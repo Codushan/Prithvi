@@ -6,7 +6,7 @@
       { name: `Ponnala Venkata Padma Kishor`, role: `Developer`, description: `Creates responsive interfaces with architectural influence` },
       { name: `Arun krishna`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
       { name: `Krishna Singh`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
-      { name: `Deepak Kumar`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
+      { name: `Deepak Yadav`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
     ],
     events: [
       { name: `Sarvagya Sharama`, role: `Committee Member`, description: `Manages all technical events & workshops` },
