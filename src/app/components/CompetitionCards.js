@@ -68,7 +68,7 @@ const CompetitionCards = () => {
               <span className={styles.prizeAmount}>{competition.prize}</span>
             </div>
 
-            <Link href={`/RegistrationForm?topic=${encodeURIComponent(competition.title)}&event=Competition`}><button className={styles.exploreButton}>Register</button></Link>
+            <Link href={`/RegistrationForm?topic=${encodeURIComponent(competition.title)}&event=Competition&money=${encodeURIComponent(competition.regfee)}`}><button className={styles.exploreButton}>Register</button></Link>
 
 
           </div>

@@ -10,6 +10,7 @@ function RegistrationFormContent() {
   const searchParams = useSearchParams();
   const topic = searchParams.get('topic') || 'Default Topic';
   const event = searchParams.get('event');
+  const money = searchParams.get('money') || '600';
   const infa = [
     'Individual participations and teams up to 3 members are allowed. (Cross-college teams are allowed).',
     'The topic should be innovative and futuristically civil engineering-related.',
@@ -246,7 +247,7 @@ function RegistrationFormContent() {
           
           <div className={styles.registrationFee}>
             <h4>Registration Fee:</h4>
-            <p>₹500</p>
+            <p>₹{money}</p>
           </div>
         </div>
         
@@ -382,8 +383,8 @@ function RegistrationFormContent() {
       />
     </div>
   
-  <p className={styles.scanText}>Scan to pay ₹500</p>
-  <p className={styles.upiId}>UPI: prithvi25@ybl</p>
+  <p className={styles.scanText}>Scan to pay ₹{money}</p>
+  <p className={styles.upiId}>UPI: 7902334933@pz<br/>MUHAMMED ANAS K</p>
 </div>
               
               <div className={styles.formGroup}>
@@ -423,7 +424,7 @@ function RegistrationFormContent() {
                     onClick={handleResubmission}
                     
                   >
-                    Upload Different Image
+                    Re-upload Image
                   </button>
                 </div>
               )}

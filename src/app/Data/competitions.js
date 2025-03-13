@@ -4,8 +4,8 @@ const competitions = [
       img: "/comp1.jpg",
       title: "Model Masters",
       description: "Turn ideas into reality! 🏗✨ Step into Model Masters, a challenge where ideas take shape and innovation meets execution! From concept to construction, transform your vision into tangible models while mastering the art of structural design and problem-solving. 🔥",
-      // prize: "₹20,000",
-      regfee: "₹20,000",
+      prize: "₹8,000",
+      regfee: "99",
       icon: "🌉"
     },
     {
@@ -14,7 +14,7 @@ const competitions = [
       title: "Treasure Hunt",
       description: "The clock is ticking, the clues are waiting, and the hunt is on! 🕵‍♂🔎 Get ready to race through hidden corners, crack mind-bending riddles, and outsmart the competition in the ultimate Treasure Hunt. Every step brings you closer to victory, but only the sharpest minds and fastest feet will claim the prize. Think quick, move smart, and trust your instincts—because X marks the spot, but only if you can find it first! 🏆✨",
       prize: "₹3,000",
-      regfee: "₹99",
+      regfee: "99",
       icon: "📐"
     },
     {
@@ -23,7 +23,7 @@ const competitions = [
       title: "Infranova",
       description: "Prithvi 2025: Building the Future of Civil Engineering! Join us at NIT Calicut for InfraNova 2025, where innovation meets excellence! Featuring expert talks, cutting-edge project exhibitions, and a special collaboration with Larsen & Toubro (L&T), this is your chance to shape the future of infrastructure. Exciting awards, expert panels, and groundbreaking ideas await! Don't miss out!",
       prize: "₹8,000",
-      regfee: "₹99",
+      regfee: "99",
       icon: "🧱"
     },
     // {
