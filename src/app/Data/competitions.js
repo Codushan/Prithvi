@@ -10,7 +10,7 @@ const competitions = [
     },
     {
       id: 2,
-      img: "/comp2.png",
+      img: "/comp2.jpg",
       title: "Treasure Hunt",
       description: "The clock is ticking, the clues are waiting, and the hunt is on! 🕵‍♂🔎 Get ready to race through hidden corners, crack mind-bending riddles, and outsmart the competition in the ultimate Treasure Hunt. Every step brings you closer to victory, but only the sharpest minds and fastest feet will claim the prize. Think quick, move smart, and trust your instincts—because X marks the spot, but only if you can find it first! 🏆✨",
       prize: "₹3,000",
