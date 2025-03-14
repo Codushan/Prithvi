@@ -27,6 +27,7 @@ const WorkshopCards = () => {
         });
       }
     };
+   
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initial position
@@ -100,12 +101,9 @@ const WorkshopCards = () => {
             </div>
             
             <div className={styles.cardFooter}>
-              {/* <button className={styles.moreButton}>More Details</button> */}
+              
 
-              <Link 
-  className={styles.registerButton} 
-  href={`/RegistrationForm?topic=${encodeURIComponent(workshop.title)}&event=Workshop`}
->Register</Link>
+            <Link className={styles.registerButton} href={`/RegistrationForm/workshop/${workshop.id}`}>Register</Link>
 
               
 

@@ -43,12 +43,12 @@ const Sponsors = () => {
         </div>
 
         <div className={styles.description}>
-          <p>Prithvi 2025: Building the Future of Civil Engineering! Join us at NIT Calicut for Prithvi 2025, where innovation meets excellence! Featuring expert talks, cutting-edge project exhibitions, and a special collaboration with Larsen & Toubro (L&T), this is your chance to shape the future of infrastructure. Exciting awards, expert panels, and groundbreaking ideas await! Don't miss out!</p>
+          <p>We are proud to collaborate with our esteemed marketing partners, whose support and expertise help us reach new heights. Together, we create impactful experiences and drive innovation. Thank you for being a part of our journey!</p>
         </div>
 
         <div className={styles.sponsorTiers}>
           <div className={styles.tier}>
-            {/* <h3>Foundation Partners</h3> */}
+             <h3>Our Valued Marketing Partners</h3> 
             <div className={styles.sponsorGrid}>
               {[1].map((i) => (
                 <div key={`platinum-${i}`} className={styles.sponsorCard}>
@@ -58,7 +58,8 @@ const Sponsors = () => {
                   <div className={styles.logoPlaceholder}>
                   <Image src="/Sponsor1.png" alt="Sponsor 1" width={300} height={200} />
                   </div>
-                  {/* <h4>Sponsor {i}</h4> */}
+                   <h4>Vajra</h4> 
+                   <h5>Printing Partner</h5>
                 </div>
               ))}
             </div>
