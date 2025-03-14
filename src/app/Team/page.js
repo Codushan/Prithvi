@@ -4,6 +4,8 @@ import styles from './page.module.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import teamData from '../Data/teamData';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
 const OurTeam = () => {
   const [activeTab, setActiveTab] = useState(`tech`);
   const canvasRef = useRef(null);
@@ -210,9 +212,9 @@ const OurTeam = () => {
                 {activeTab === `tech` && (
                   <div className={styles.techDetails}>
                     <div className={styles.techSkills}>
-                      <div className={styles.techSkill}></div>
-                      <div className={styles.techSkill}></div>
-                      <div className={styles.techSkill}></div>
+                      <div className={styles.techSkill}><Link href={member.git} target="_blank" rel="noopener noreferrer"><FaGithub style={{ color: "#34c9eb" }}/></Link></div>
+                      <div className={styles.techSkill}><Link href={member.linked} target="_blank" rel="noopener noreferrer"><FaLinkedin style={{ color: "#34c9eb" }}/></Link></div>
+                      <div className={styles.techSkill}><Link href={member.insta} target="_blank" rel="noopener noreferrer"><FaInstagram style={{ color: "#34c9eb" }}/></Link></div>
                     </div>
                   </div>
                 )}
