@@ -161,7 +161,7 @@ function RegistrationFormContent() {
       if (res.status === 200) {
         setFormData({
           name: '',
-          rollNumber: '',
+          // rollNumber: '',
           email: '',
           mobileNumber: '',
           whatsappNumber: '',
@@ -271,7 +271,7 @@ function RegistrationFormContent() {
                 />
               </div>
               
-              <div className={styles.formGroup}>
+              {/* <div className={styles.formGroup}>
                 <label htmlFor="rollNumber">Roll Number</label>
                 <input
                   type="text"
@@ -283,7 +283,7 @@ function RegistrationFormContent() {
                   className={styles.formInput}
                   placeholder="Enter your roll number"
                 />
-              </div>
+              </div> */}
 
               <div className={styles.formGroup}>
                 <label htmlFor="email">Email</label>
