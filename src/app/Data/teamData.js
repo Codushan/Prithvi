@@ -4,7 +4,7 @@
       { name: `Chandrabhushan Kumar`, role: `Tech Lead & UI/UX`, description: `Full-stack developer and Specializes in intuitive interfaces with engineering precision` },
       { name: `Himanshu Raj`, role: `Backend Developer`, description: `Full-stack developer and Data structures & algorithms specialist with civil engineering background` },
       { name: `Ponnala Venkata Padma Kishor`, role: `Developer`, description: `Creates responsive interfaces with architectural influence` },
-      { name: `Arun krishna`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
+      { name: `Arun Krishnan K`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
       { name: `Krishna Singh`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
       { name: `Deepak Yadav`, role: `Junior Developer`, description: `Creates responsive interfaces with architectural influence` },
     ],
