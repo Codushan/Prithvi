@@ -414,7 +414,7 @@ function RegistrationFormContent() {
               <div className={styles.formGroup}>
                 {!paymentScreenshot && (
                   <div className={styles.fileInputLabel}>
-                    <label htmlFor="paymentScreenshot">choose file</label>
+                    <label htmlFor="paymentScreenshot">Please upload payment proof</label>
                     <input
                       type="file"
                       id="paymentScreenshot"
