@@ -172,10 +172,10 @@ const OurTeam = () => {
           </div>
           
           <div 
-            className={`${styles.teamTab} ${activeTab === `sponsors` ? styles.activeTab : ``}`}
-            onClick={() => setActiveTab(`sponsors`)}
+            className={`${styles.teamTab} ${activeTab === `PRC` ? styles.activeTab : ``}`}
+            onClick={() => setActiveTab(`PRC`)}
           >
-            <span>Sponsors Team</span>
+            <span>PRC Team</span>
             <div className={styles.tabIndicator}></div>
           </div>
         </div>

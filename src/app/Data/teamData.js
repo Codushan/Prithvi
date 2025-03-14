@@ -16,7 +16,7 @@
       { name: `*********`, role: `Marketing Head`, description: `Promotes Prithvi across engineering colleges` },
       { name: `*********`, role: `Social Media Manager`, description: `Creates engaging content for all platforms` }
     ],
-    sponsors: [
+    PRC: [
       { name: `*********`, role: `Sponsorship Lead`, description: `Connects with industry partners for collaboration` },
       { name: `*********`, role: `Industry Relations`, description: `Builds relationships with civil engineering firms` }
     ]
