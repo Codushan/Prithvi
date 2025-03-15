@@ -242,6 +242,7 @@
     background-color: rgba(30, 30, 35, 0.6);
     border-radius: 10px;
     padding: 50px 100px;
+    padding-bottom: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
@@ -297,7 +298,7 @@
     position: relative;
     width: 160px;
     height: 120px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,7 +336,7 @@
   }
   
   .sponsorCard h4 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin: 10px 0 0;
     color: #f5f5f5;
     position: relative;
@@ -343,7 +344,7 @@
   }
   .sponsorCard h5 {
     font-size: 1.3rem;
-    font-weight: 50;
+    font-weight: 40;
     margin: 10px 0 0;
     color: #f5f5f5;
     position: relative;
@@ -465,7 +466,7 @@
     }
     
     .sponsorCard {
-      padding: 20px 15px;
+      padding: 30px 50px;
     }
     
     .logoPlaceholder {
