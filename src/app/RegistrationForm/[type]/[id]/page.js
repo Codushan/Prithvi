@@ -7,11 +7,16 @@ import axios from 'axios';
 import { useRouter, useParams } from 'next/navigation';
 import competitions from '@/app/Data/competitions.js';
 import workshops from '@/app/Data/workshops.js';
+import lectures from "@/app/Data/lectures";
 
 
 function RegistrationFormContent() {
   const params = useParams();
   const router = useRouter();
+  const [isComp, setIsComp] = useState(false);
+  const [members, setMembers] = useState([]);
+const [memberName, setMemberName] = useState('');
+const [showMemberInput, setShowMemberInput] = useState(false);
   const [eventData, setEventData] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -19,7 +24,7 @@ function RegistrationFormContent() {
     mobileNumber: '',
     whatsappNumber: '',
     instituteId: '',
-    instituteName: '',
+    instituteName: ''
   });
   
   const [paymentScreenshot, setPaymentScreenshot] = useState(null);
@@ -29,6 +34,7 @@ function RegistrationFormContent() {
   const [imagePreview, setImagePreview] = useState(null);
 
   const { type, id } = params;
+  
   
   useEffect(() => {
     let data = null;
@@ -45,6 +51,7 @@ function RegistrationFormContent() {
         };
       }
     } else if (type === 'competition') {
+      
     
       const competition = competitions.find(c => c.id.toString() === id || c.slug === id);
       
@@ -55,6 +62,21 @@ function RegistrationFormContent() {
           description: competition.description,
           money: competition.regfee || '99',
         };
+        setIsComp(true);
+      }
+    }else if (type === 'lecture') {
+      
+    
+      const lecture = lectures.find(c => c.id.toString() === id || c.slug === id);
+      
+      if (lecture) {
+        data = {
+          topic: lecture.title,
+          event: 'Lecture',
+          description: lecture.description,
+          money: lecture.regfee || '399',
+        };
+        
       }
     }
     
@@ -124,7 +146,12 @@ function RegistrationFormContent() {
       submitFormData.append("instituteId", formData.instituteId);
       submitFormData.append("instituteName", formData.instituteName);
       submitFormData.append("paymentProof", paymentScreenshot);
+
+      members.forEach((member, index) => {
+        submitFormData.append("members", member);
+      });
       
+
       if (eventData && eventData.topic) {
         const res = await axios.post(`/api/submit/${eventData.topic}`, submitFormData, {
           headers: { "Content-Type": "multipart/form-data" },
@@ -137,8 +164,9 @@ function RegistrationFormContent() {
             mobileNumber: '',
             whatsappNumber: '',
             instituteId: '',
-            instituteName: '',
+            instituteName: ''
           });
+          setMembers([]);
           setPaymentScreenshot(null);
           setCurrentStep('details');
           setPaymentStatus(false);
@@ -174,6 +202,31 @@ function RegistrationFormContent() {
     return <div>Loading...</div>;
   }
 
+  const handleAddMember = () => {
+    setShowMemberInput(true);
+  };
+  const handleMemberNameChange = (e) => {
+    setMemberName(e.target.value);
+  };
+
+  const handleAddMemberToList = () => {
+    if (memberName.trim()) {
+      setMembers([...members, memberName]);
+      setMemberName('');
+      setShowMemberInput(false);
+    } else {
+      alert("Please enter member name");
+    }
+  };
+  const handleRemoveMember = (index) => {
+    const updatedMembers = [...members];
+    updatedMembers.splice(index, 1);
+    setMembers(updatedMembers);
+  };
+
+
+
+ 
   const topic = eventData.topic;
   const event = eventData.event;
   const description = eventData.description;
@@ -238,7 +291,10 @@ function RegistrationFormContent() {
     }else if(topic === 'Treasure Hunt'){
       b = 'Sreeraj A: +91 6282841184';
     }
-  }
+  }else if(event === 'Lecture'){
+    b = 'Abhijeet Singh: +91 6387116713'
+    
+  } 
   
   return (
     <div className={styles.registrationContainer}>
@@ -295,10 +351,14 @@ function RegistrationFormContent() {
         <div className={styles.formSection}>
           {currentStep === 'details' ? (
             <form onSubmit={handleDetailsSubmit} className={styles.registrationForm}>
-              <h3 className={styles.formTitle}>Registration Details</h3>
+
+            {isComp ? (<h3 className={styles.formTitle}>Team Registration</h3>):(<h3 className={styles.formTitle}>Registration Details</h3>)}
+              
               
               <div className={styles.formGroup}>
-                <label htmlFor="name">Full Name</label>
+
+                {isComp ? (<label htmlFor="name">Leader's Name</label>):(<label htmlFor="name">Full Name</label>)}
+                
                 <input
                   type="text"
                   id="name"
@@ -383,6 +443,62 @@ function RegistrationFormContent() {
                 />
               </div>
               
+          
+
+              {isComp && (
+  <div className={styles.membersSection}>
+    <h4>Member Name</h4>
+    
+   
+                      {members.length > 0 && (
+                        <div className={styles.membersList}>
+                          {members.map((member, index) => (
+                            <div key={index} className={styles.memberItem}>
+                              <span>{member}</span>
+                              
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      
+         {showMemberInput ? (
+          <div className={styles.addMemberInputGroup}>
+           <input
+            type="text"
+          value={memberName}
+          onChange={handleMemberNameChange}
+          className={styles.formInput}
+          placeholder="Enter member name"
+        />
+        <div className={styles.memberInputButtons}>
+          <button 
+            type="button" 
+            onClick={handleAddMemberToList}
+            className={styles.addbtn}
+          >
+            Add
+          </button>
+          <button 
+            type="button" 
+            onClick={() => setShowMemberInput(false)}
+            className={styles.cancelbtn}
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    ) : (
+      <button 
+        type="button" 
+        onClick={handleAddMember} 
+        className={styles.payButton}
+      >
+        + Add Member
+      </button>
+    )}
+  </div>
+)}
+
               <button type="submit" className={styles.payButton}>
                 Proceed to Payment
               </button>

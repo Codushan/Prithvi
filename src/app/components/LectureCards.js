@@ -101,8 +101,7 @@ const LectureCards = () => {
               <div className={styles.cardActions}>
                 {/* <button className={styles.moreButton}>More Info</button> */}
 
-              <Link className={styles.attendButton} href={`/RegistrationForm?topic=${encodeURIComponent(lecture.title)}&event=Lectures`}>Attend</Link>
-
+              <Link className={styles.attendButton} href={`/RegistrationForm/lecture/${lecture.id}`}>Attend</Link>
               </div>
             </div>
           </div>

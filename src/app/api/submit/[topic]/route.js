@@ -29,6 +29,9 @@ export async function POST(request, { params }) {
     }else if (topic === "Infranova"){
       id = process.env.GOOGLE_SHEET_ID3;
     }
+    else if (topic === "Civil Engineering: New Horizons and Trends"){
+      id = process.env.LECTURE_SHEET_ID1;
+    }
 
     const formData = await request.formData();
     const name = formData.get("name");
@@ -38,7 +41,8 @@ export async function POST(request, { params }) {
     const instituteId = formData.get("instituteId");
     const instituteName = formData.get("instituteName");
     const paymentProof = formData.get("paymentProof");
-
+   
+    const members = formData.getAll("members");
     if (!paymentProof) {
       return NextResponse.json(
         { message: "Payment proof upload is required", success: false },
@@ -64,11 +68,12 @@ export async function POST(request, { params }) {
         "https://www.googleapis.com/auth/spreadsheets",
       ],
     });
+    
 
     const sheets = google.sheets({ auth, version: "v4" });
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: id,
-      range: "A1:H1",
+      range: "A1:I1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
@@ -81,6 +86,7 @@ export async function POST(request, { params }) {
             instituteName,
             imageUrl,
             submissionDate,
+            members.join(", ")
           ],
         ],
       },
