@@ -41,6 +41,9 @@ export async function POST(request, { params }) {
     const instituteId = formData.get("instituteId");
     const instituteName = formData.get("instituteName");
     const paymentProof = formData.get("paymentProof");
+    const referalCode = formData.get("referalCode");
+
+  
    
     const members = formData.getAll("members");
     if (!paymentProof) {
@@ -73,7 +76,7 @@ export async function POST(request, { params }) {
     const sheets = google.sheets({ auth, version: "v4" });
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: id,
-      range: "A1:I1",
+      range: "A1:J1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
@@ -86,7 +89,9 @@ export async function POST(request, { params }) {
             instituteName,
             imageUrl,
             submissionDate,
+            referalCode,
             members.join(", ")
+            
           ],
         ],
       },
