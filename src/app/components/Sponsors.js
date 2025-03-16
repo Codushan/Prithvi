@@ -58,30 +58,30 @@ const Sponsors = () => {
                   <div className={styles.logoPlaceholder}>
                   <Image src="/Sponsor1.png" alt="Sponsor 1" width={300} height={200} />
                   </div>
-                   <h4>Vajra</h4> 
+                   <h4>VAJRA</h4> 
                    <h5>Printing Partner</h5>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* <div className={styles.tier}>
-            <h3>Structural Supporters</h3>
+          <div className={styles.tier}>
+            <h3>Our Valued Event Partners</h3>
             <div className={styles.sponsorGrid}>
-              {[1, 2, 3, 4].map((i) => (
+              {[1].map((i) => (
                 <div key={`gold-${i}`} className={styles.sponsorCard}>
                   <div className={styles.blueprint}>
                     <div className={styles.blueprintLines}></div>
                   </div>
                   <div className={styles.logoPlaceholder}>
-                    <div className={styles.beam}></div>
-                    <div className={styles.column}></div>
+                  <Image src="/Sponsor2.png" alt="Sponsor 2" width={300} height={150} />
                   </div>
-                  <h4>Sponsor {i}</h4>
+                  <h4>CIVILIANZ</h4>
+                  <h5>presents INFRANOVA</h5>
                 </div>
               ))}
             </div>
-          </div> */}
+          </div>
 
           {/* <div className={styles.tier}>
             <h3>Technical Associates</h3>
