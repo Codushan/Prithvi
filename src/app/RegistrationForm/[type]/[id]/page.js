@@ -146,7 +146,8 @@ const [showMemberInput, setShowMemberInput] = useState(false);
       submitFormData.append("whatsappNumber", formData.whatsappNumber);
       submitFormData.append("instituteId", formData.instituteId);
       submitFormData.append("instituteName", formData.instituteName);
-      submitFormData.append("referalCode", formData.referalCode);
+      submitFormData.append("referalCode", formData.referalCode || '');
+     
       submitFormData.append("paymentProof", paymentScreenshot);
 
       members.forEach((member, index) => {
@@ -446,14 +447,13 @@ const [showMemberInput, setShowMemberInput] = useState(false);
                 />
               </div>
               <div className={styles.formGroup}>
-                <label htmlFor="referalCode">Referal Code</label>
+                <label htmlFor="referalCode">Referral Code</label>
                 <input
                   type="text"
                   id="referalCode"
                   name="referalCode"
                   value={formData.referalCode}
                   onChange={handleChange}
-                  required
                   className={styles.formInput}
                   placeholder="Enter your Referal code"
                   style={{ width: "40%" }}
