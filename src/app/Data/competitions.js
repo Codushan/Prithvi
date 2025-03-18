@@ -5,7 +5,7 @@ const competitions = [
       title: "Model Masters",
       description: "Turn ideas into reality! 🏗✨ Step into Model Masters, a challenge where ideas take shape and innovation meets execution! From concept to construction, transform your vision into tangible models while mastering the art of structural design and problem-solving. 🔥",
       prize: "₹6,000",
-      regfee: "99",
+      regfee: "149",
       icon: "🌉"
     },
     {
