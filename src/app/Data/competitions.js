@@ -5,7 +5,7 @@ const competitions = [
       title: "Model Masters",
       description: "Turn ideas into reality! 🏗✨ Step into Model Masters, a challenge where ideas take shape and innovation meets execution! From concept to construction, transform your vision into tangible models while mastering the art of structural design and problem-solving. 🔥",
       prize: "₹6,000",
-      regfee: "99",
+      regfee: "149",
       icon: "🌉"
     },
     {
@@ -21,7 +21,7 @@ const competitions = [
       id: 3,
       img: "/comp3.jpg",
       title: "Infranova",
-      description: "Prithvi 2025: Building the Future of Civil Engineering! Join us at NIT Calicut for InfraNova 2025, where innovation meets excellence! Featuring expert talks, cutting-edge project exhibitions, and a special collaboration with Larsen & Toubro (L&T), this is your chance to shape the future of infrastructure. Exciting awards, expert panels, and groundbreaking ideas await! Don't miss out!",
+      description: "INFRANOVA - The Ultimate Civil Engineering Expo! Get ready for PRITHVI 2025's most electrifying event! Show off your futuristic civil engineering ideas at INFRANOVA - where innovation meets infrastructure! Bring your groundbreaking ideas, cutting-edge prototypes, and game-changing concepts to life in an expo designed to showcase the future of infrastructure and technology. Whether it's smart cities, futuristic structures, or sustainable solutions, your ideas have the power to transform the world!💫💫",
       prize: "₹6,000",
       regfee: "99",
       icon: "🧱"

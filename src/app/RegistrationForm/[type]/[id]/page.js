@@ -24,7 +24,8 @@ const [showMemberInput, setShowMemberInput] = useState(false);
     mobileNumber: '',
     whatsappNumber: '',
     instituteId: '',
-    instituteName: ''
+    instituteName: '',
+    referalCode:''
   });
   
   const [paymentScreenshot, setPaymentScreenshot] = useState(null);
@@ -145,6 +146,8 @@ const [showMemberInput, setShowMemberInput] = useState(false);
       submitFormData.append("whatsappNumber", formData.whatsappNumber);
       submitFormData.append("instituteId", formData.instituteId);
       submitFormData.append("instituteName", formData.instituteName);
+      submitFormData.append("referalCode", formData.referalCode || '');
+     
       submitFormData.append("paymentProof", paymentScreenshot);
 
       members.forEach((member, index) => {
@@ -164,7 +167,8 @@ const [showMemberInput, setShowMemberInput] = useState(false);
             mobileNumber: '',
             whatsappNumber: '',
             instituteId: '',
-            instituteName: ''
+            instituteName: '',
+            referalCode:''
           });
           setMembers([]);
           setPaymentScreenshot(null);
@@ -440,6 +444,19 @@ const [showMemberInput, setShowMemberInput] = useState(false);
                   required
                   className={styles.formInput}
                   placeholder="Enter your institute name"
+                />
+              </div>
+              <div className={styles.formGroup}>
+                <label htmlFor="referalCode">Referral Code</label>
+                <input
+                  type="text"
+                  id="referalCode"
+                  name="referalCode"
+                  value={formData.referalCode}
+                  onChange={handleChange}
+                  className={styles.formInput}
+                  placeholder="Enter your Referal code"
+                  style={{ width: "40%" }}
                 />
               </div>
               
