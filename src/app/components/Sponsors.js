@@ -72,7 +72,7 @@ const Sponsors = () => {
 
           <div className={styles.lower}>
             <div className={styles.tier}>
-              <h3>Our Marketing Partners</h3>
+              <h3>Our Gift Partner</h3>
               <div className={styles.sponsorGrid}>
                 {[1].map((i) => (
                   <div key={`platinum-${i}`} className={styles.sponsorCard}>
@@ -80,17 +80,17 @@ const Sponsors = () => {
                       <div className={styles.blueprintLines}></div>
                     </div>
                     <div className={styles.logoPlaceholder}>
-                      <Image src="/Sponsor1.png" alt="Sponsor 1" width={300} height={200} />
+                      <Image src="/acc.png" alt="Sponsor 1" width={300} height={200} />
                     </div>
-                    <h4>VAJRA</h4>
-                    <h5>Printing Partner</h5>
+                    <h4>ACC cement</h4>
+                    <h5>Gift Partner</h5>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className={styles.tier}>
-              <h3>Our Event Partners</h3>
+              <h3>Our Event Partner</h3>
               <div className={styles.sponsorGrid}>
                 {[1].map((i) => (
                   <div key={`gold-${i}`} className={styles.sponsorCard}>
@@ -108,7 +108,7 @@ const Sponsors = () => {
             </div>
 
             <div className={styles.tier}>
-              <h3>Our Banking Partners</h3>
+              <h3>Our Banking Partner</h3>
               <div className={styles.sponsorGrid}>
                 {[1].map((i) => (
                   <div key={`gold-${i}`} className={styles.sponsorCard}>
