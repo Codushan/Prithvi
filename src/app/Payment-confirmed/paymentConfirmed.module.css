@@ -1,0 +1,268 @@
+.confirmationContainer {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  
+  .navbarContainer {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .receiptWrapper {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .receiptHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+  }
+  
+  .logoContainer {
+    width: 80px;
+    height: 80px;
+    margin-right: 1.5rem;
+  }
+  
+  .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .receiptTitle {
+    flex: 1;
+  }
+  
+  .receiptTitle h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #1a202c;
+  }
+  
+  .receiptSubtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin: 0.5rem 0 0;
+  }
+  
+  .receiptBody {
+    padding: 1rem 0;
+  }
+  
+  .confirmationMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .checkmarkIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #48bb78;
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .confirmationMessage h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #2d3748;
+  }
+  
+  .confirmationMessage p {
+    color: #4a5568;
+    margin: 0;
+  }
+  
+  .receiptDetails {
+    background-color: #f7fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .receiptRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .receiptLabel {
+    font-weight: 600;
+    color: #4a5568;
+  }
+  
+  .receiptValue {
+    color: #1a202c;
+    text-align: right;
+    word-break: break-word;
+    max-width: 60%;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1rem 0;
+  }
+  
+  .noteSection {
+    padding: 1rem;
+    background-color: #ebf8ff;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+  }
+  
+  .note {
+    margin: 0.5rem 0;
+    color: #2c5282;
+    font-size: 0.9rem;
+  }
+  
+  .receiptFooter {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f0f0f0;
+    text-align: center;
+  }
+  
+  .footerText p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .downloadButton, .homeButton {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .downloadButton {
+    background-color: #3182ce;
+    color: white;
+  }
+  
+  .downloadButton:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .homeButton {
+    background-color: #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .homeButton:hover {
+    background-color: #cbd5e0;
+  }
+  
+  .loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .loadingSpinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3182ce;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .errorContainer {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .backButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  @media print {
+    .navbarContainer, .actionButtons {
+      display: none;
+    }
+    
+    .receiptWrapper {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .confirmationContainer {
+      padding: 0;
+      background-color: white;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .receiptWrapper {
+      padding: 1.5rem;
+    }
+    
+    .receiptRow {
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+    
+    .receiptValue {
+      max-width: 100%;
+      text-align: left;
+      margin-top: 0.25rem;
+    }
+    
+    .actionButtons {
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      gap: 0.5rem;
+    }
+    
+    .downloadButton, .homeButton {
+      width: 100%;
+    }
+  }

@@ -25,7 +25,9 @@ const [showMemberInput, setShowMemberInput] = useState(false);
     whatsappNumber: '',
     instituteId: '',
     instituteName: '',
-    referalCode:''
+    referalCode:'',
+    event:'',
+    money:''
   });
   
   const [paymentScreenshot, setPaymentScreenshot] = useState(null);
@@ -94,7 +96,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
   
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value , event: eventData.topic , money: eventData.money}));
   };
   
   const handleFileChange = (e) => {
@@ -161,6 +163,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
         });
         
         if (res.status === 200) {
+          sessionStorage.setItem('registrationData', JSON.stringify(formData));
           setFormData({
             name: '',
             email: '',
@@ -168,7 +171,9 @@ const [showMemberInput, setShowMemberInput] = useState(false);
             whatsappNumber: '',
             instituteId: '',
             instituteName: '',
-            referalCode:''
+            referalCode:'',
+            event:'',
+            money:''
           });
           setMembers([]);
           setPaymentScreenshot(null);
@@ -177,9 +182,9 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           setIsSubmitting(false);
           setImagePreview(null);
           
-          alert('Registration successful! Thank you for registering for Prithvi\'25.');
           
-          router.push('/');
+          
+          router.push('/Payment-confirmed');
         } else {
           throw new Error('Form submission failed');
         }
