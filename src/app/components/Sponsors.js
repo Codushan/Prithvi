@@ -59,7 +59,7 @@ const Sponsors = () => {
 
                   <div className={styles.blueprint}>
                     <div className={styles.blueprintLines}></div>
-                  </div>
+                  </div><h5>For more info <span  style={{ textDecoration: "underline" }}>visit site</span> ⨠🔗</h5>
                   <div className={styles.mainSponsor}>
                     <Image src="/Skymark.png" alt="Sponsor 1" width={1920} height={200} className={styles.responsiveImage} />
                   </div>
