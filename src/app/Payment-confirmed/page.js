@@ -78,7 +78,7 @@ export default function PaymentConfirmation() {
       <div className={styles.receiptWrapper} id="receipt-for-print">
         <div className={styles.receiptHeader}>
           <div className={styles.logoContainer}>
-            <img src="/prithviw.png" alt="Prithvi Logo" className={styles.logo} />
+            <img src="/prithvib.png" alt="Prithvi Logo" className={styles.logo} />
           </div>
           <div className={styles.receiptTitle}>
             <h1>Registration Confirmation</h1>

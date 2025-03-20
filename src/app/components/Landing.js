@@ -1,6 +1,7 @@
 // components/Landing.js
 import { useEffect, useRef } from 'react';
 import styles from '../styles/Landing.module.css';
+import Image from 'next/image';
 
 const Landing = () => {
   const containerRef = useRef(null);
@@ -52,6 +53,8 @@ const Landing = () => {
       <div className={styles.building}></div>
       
       <div className={styles.content}>
+        <Image src="/SkymarkL.png" height={50} width={200} alt='Skymart@titleSponsor'></Image>
+        <h4>presents</h4>
         <h1 className={styles.title}>PRITHVI'25</h1>
         <h2 className={styles.subtitle}>Building Tomorrow's Foundation</h2>
         <p className={styles.date}>March 22, 2025</p>
