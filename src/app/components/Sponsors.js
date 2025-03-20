@@ -46,60 +46,85 @@ const Sponsors = () => {
           <p>We are proud to collaborate with our esteemed marketing partners, whose support and expertise help us reach new heights. Together, we create impactful experiences and drive innovation. Thank you for being a part of our journey!</p>
         </div>
 
+
         <div className={styles.sponsorTiers}>
+
+
           <div className={styles.tier}>
-             <h3>Our Valued Marketing Partners</h3> 
+            <h3>Our Title Sponsor</h3>
             <div className={styles.sponsorGrid}>
               {[1].map((i) => (
-                <div key={`platinum-${i}`} className={styles.sponsorCard}>
+                <Link href="https://www.skymark.in" key={`silver-${i}`} className={styles.sponsorCard} target="_blank"
+                  rel="noopener noreferrer">
+
                   <div className={styles.blueprint}>
                     <div className={styles.blueprintLines}></div>
                   </div>
-                  <div className={styles.logoPlaceholder}>
-                  <Image src="/Sponsor1.png" alt="Sponsor 1" width={300} height={200} />
+                  <div className={styles.mainSponsor}>
+                    <Image src="/Skymark.png" alt="Sponsor 1" width={1920} height={200} className={styles.responsiveImage} />
                   </div>
-                   <h4>VAJRA</h4> 
-                   <h5>Printing Partner</h5>
-                </div>
+                  <h4>Skymark Education</h4>
+                  <h5>Study Abroad</h5>
+                </Link>
               ))}
             </div>
           </div>
 
-          <div className={styles.tier}>
-            <h3>Our Valued Event Partners</h3>
-            <div className={styles.sponsorGrid}>
-              {[1].map((i) => (
-                <div key={`gold-${i}`} className={styles.sponsorCard}>
-                  <div className={styles.blueprint}>
-                    <div className={styles.blueprintLines}></div>
+          <div className={styles.lower}>
+            <div className={styles.tier}>
+              <h3>Our Marketing Partners</h3>
+              <div className={styles.sponsorGrid}>
+                {[1].map((i) => (
+                  <div key={`platinum-${i}`} className={styles.sponsorCard}>
+                    <div className={styles.blueprint}>
+                      <div className={styles.blueprintLines}></div>
+                    </div>
+                    <div className={styles.logoPlaceholder}>
+                      <Image src="/Sponsor1.png" alt="Sponsor 1" width={300} height={200} />
+                    </div>
+                    <h4>VAJRA</h4>
+                    <h5>Printing Partner</h5>
                   </div>
-                  <div className={styles.logoPlaceholder}>
-                  <Image src="/Sponsor2.png" alt="Sponsor 2" width={300} height={150} />
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.tier}>
+              <h3>Our Event Partners</h3>
+              <div className={styles.sponsorGrid}>
+                {[1].map((i) => (
+                  <div key={`gold-${i}`} className={styles.sponsorCard}>
+                    <div className={styles.blueprint}>
+                      <div className={styles.blueprintLines}></div>
+                    </div>
+                    <div className={styles.logoPlaceholder}>
+                      <Image src="/Sponsor2.png" alt="Sponsor 2" width={300} height={150} />
+                    </div>
+                    <h4>CIVILIANZ</h4>
+                    <h5>Presents INFRANOVA</h5>
                   </div>
-                  <h4>CIVILIANZ</h4>
-                  <h5>presents INFRANOVA</h5>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.tier}>
+              <h3>Our Banking Partners</h3>
+              <div className={styles.sponsorGrid}>
+                {[1].map((i) => (
+                  <div key={`gold-${i}`} className={styles.sponsorCard}>
+                    <div className={styles.blueprint}>
+                      <div className={styles.blueprintLines}></div>
+                    </div>
+                    <div className={styles.logoPlaceholder}>
+                      <Image src="/bankLogo.png" alt="Sponsor 2" width={300} height={150} />
+                    </div>
+                    <h4>ICICI Bank</h4>
+                    <h5>Trusted banking partner</h5>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-
-          {/* <div className={styles.tier}>
-            <h3>Technical Associates</h3>
-            <div className={styles.sponsorGrid}>
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={`silver-${i}`} className={styles.sponsorCard}>
-                  <div className={styles.blueprint}>
-                    <div className={styles.blueprintLines}></div>
-                  </div>
-                  <div className={styles.logoPlaceholder}>
-                    <div className={styles.beam}></div>
-                    <div className={styles.column}></div>
-                  </div>
-                  <h4>Sponsor {i}</h4>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
 
         {/* <div className={styles.sponsorCTA}>

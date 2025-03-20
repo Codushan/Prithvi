@@ -170,11 +170,65 @@
   .sponsorTiers {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 60px;
   }
   
+  .mainSponsor {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .sponsorCard:has(.mainSponsor) {
+    border-bottom: 2px solid rgba(0, 174, 255, 0.7);
+    width: 80%;
+    animation: glowPulseBottom 2s infinite alternate ease-in-out;
+  }
+  
+  /* Continuous glowing animation at the bottom */
+  @keyframes glowPulseBottom {
+    0% {
+      box-shadow: 0 10px 10px rgba(0, 174, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 15px 25px rgba(0, 174, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 10px 10px rgba(0, 174, 255, 0.4);
+    }
+  }
+  
+  /* Optional: Add a pulsing animation */
+  @keyframes glowPulse {
+    from {
+      box-shadow: 0 0 30px rgba(0, 174, 255, 0.7);
+    }
+    to {
+      box-shadow: 0 0 50px rgba(0, 174, 255, 1);
+    }
+  }
+
+  .responsiveImage {
+    width: 90vw;
+    height: auto; /* Maintains aspect ratio */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .lower{
+    display: flex;
+    width: 90vw;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
   .tier {
     position: relative;
+    
   }
   
   .tier h3 {
@@ -461,10 +515,24 @@
       font-size: 1rem;
     }
     
+    /* .mainSponsor{
+      width: 100px;
+    } */
+
+    .lower{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .lower h3{
+      font-size: 1rem;
+    }
+
     .tier h3 {
       font-size: 1.5rem;
     }
-    
+
     .sponsorCard {
       padding: 30px 50px;
     }
