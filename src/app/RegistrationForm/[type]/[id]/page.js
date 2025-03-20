@@ -184,7 +184,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           
           
           
-          router.push('/');
+          router.push('/Payment-confirmed');
         } else {
           throw new Error('Form submission failed');
         }
