@@ -159,7 +159,7 @@ export default function PaymentConfirmation() {
         
         <div className={styles.receiptFooter}>
           <div className={styles.footerText}>
-            <p>Prithvi'25 - Department of Civil Engineering NIT Calicut</p>
+            <p>Prithvi'25 - Department of Civil Engineering, NIT Calicut</p>
           </div>
         </div>
       </div>
