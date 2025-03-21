@@ -115,7 +115,7 @@ export default function PaymentConfirmation() {
             
             <div className={styles.receiptRow}>
               <span className={styles.receiptLabel}>Amount Paid:</span>
-              <span className={styles.receiptValue}>₹{receiptData.money || '600'}</span>
+              <span className={styles.receiptValue}>₹{receiptData.newfee|| receiptData.money || '600'}</span>
             </div>
             
             <div className={styles.divider}></div>
