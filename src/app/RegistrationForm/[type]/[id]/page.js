@@ -51,6 +51,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           event: 'Workshop',
           description: workshop.description,
           money: '600', 
+          newfee: "249",
         };
       }
     } else if (type === 'competition') {
@@ -78,6 +79,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           event: 'Lecture',
           description: lecture.description,
           money: lecture.regfee || '399',
+          newfee: "149",
         };
         
       }
@@ -240,6 +242,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
   const event = eventData.event;
   const description = eventData.description;
   const money = eventData.money;
+  const newfee = eventData.newfee;
   
   const infa = [
     'Individual participations and teams up to 3 members are allowed. (Cross-college teams are allowed).',
@@ -352,7 +355,8 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           
           <div className={styles.registrationFee}>
             <h4>Registration Fee:</h4>
-            <p>₹{money}</p>
+            <p className={styles.money}>₹{money}</p>
+            <p>₹{newfee}</p>
           </div>
         </div>
         
@@ -545,7 +549,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
                     className={styles.qrImage} 
                   />
                 </div>
-                <p className={styles.scanText}>Scan to pay ₹{money}</p>
+                <p className={styles.scanText}>Scan to pay ₹{newfee}</p>
                 <p className={styles.upiId}>UPI: 7902334933@pz<br/>MUHAMMED ANAS K</p>
               </div>
               

@@ -8,7 +8,8 @@ const workshops = [
     date: "22 March, 2025",
     duration: "11-12:45 AM and 2:30-4 PM",
     instructor: "ARSHIF THUMBIL and SIRAJUDHEEN N",
-    seats: 40
+    seats: 40,
+    newfee: "249",
   },
   
 ];

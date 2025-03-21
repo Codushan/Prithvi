@@ -308,6 +308,23 @@
     font-weight: bold;
     color: #2575fc;
   }
+
+  .money {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .money::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    transform: rotate(-12deg); /* Adjust the angle as needed */
+  }
+  
   
   /* Form Section (Right on desktop, bottom on mobile) */
   .formSection {
