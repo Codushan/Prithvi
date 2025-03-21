@@ -175,7 +175,8 @@ const [showMemberInput, setShowMemberInput] = useState(false);
             instituteName: '',
             referalCode:'',
             event:'',
-            money:''
+            money:'',
+            newfee:''
           });
           setMembers([]);
           setPaymentScreenshot(null);
@@ -582,7 +583,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
                     src={imagePreview} 
                     alt="Payment Screenshot" 
                     className={styles.imagePreview} 
-                    style={{ maxWidth: "300px", marginTop: "10px", borderRadius: "4px" }} 
+                    style={{ maxWidth: "300px", marginTop: "10px", borderRadius: "4px" }}
                   />
                   <button 
                     type="button" 
