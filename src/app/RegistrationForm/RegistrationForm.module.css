@@ -324,6 +324,11 @@
     background-color: red;
     transform: rotate(-12deg); /* Adjust the angle as needed */
   }
+
+  .money1{
+    position: relative;
+    display: inline-block;
+  }
   
   
   /* Form Section (Right on desktop, bottom on mobile) */

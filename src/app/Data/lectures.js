@@ -17,7 +17,7 @@ const lectures = [
   },
 
   {
-    id: 1,
+    id: 2,
     img: "/lecture2.jpg",
     title: "How Construction Monitoring Can Be Automated Using AI",
     speaker: "Dr. Aritra Pal",

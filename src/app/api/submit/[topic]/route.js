@@ -31,6 +31,8 @@ export async function POST(request, { params }) {
     }
     else if (topic === "Civil Engineering: New Horizons and Trends"){
       id = process.env.LECTURE_SHEET_ID1;
+    }else if(topic === "How Construction Monitoring Can Be Automated Using AI"){
+      id = process.env.LECTURE_SHEET_ID2;
     }
 
     const formData = await request.formData();
