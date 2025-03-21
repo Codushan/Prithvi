@@ -80,7 +80,7 @@ const Sponsors = () => {
                       <div className={styles.blueprintLines}></div>
                     </div>
                     <div className={styles.logoPlaceholder}>
-                      <Image src="/acc.png" alt="Sponsor 1" width={300} height={200} />
+                      <Image src="/adan.png" alt="Sponsor 1" width={300} height={200} />
                     </div>
                     <h4>ACC cement</h4>
                     <h5>Gift Partner</h5>
