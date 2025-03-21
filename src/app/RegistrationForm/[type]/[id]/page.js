@@ -556,13 +556,13 @@ const [showMemberInput, setShowMemberInput] = useState(false);
               <div className={styles.qrCodeContainer}>
                 <div className={styles.qrCode}>
                   <img 
-                    src="/QR.jpg" 
+                    src="/QR2.jpg" 
                     alt="Payment QR Code" 
                     className={styles.qrImage} 
                   />
                 </div>
                 <p className={styles.scanText}>Scan to pay ₹{newfee}</p>
-                <p className={styles.upiId}>UPI: 7902334933@pz<br/>MUHAMMED ANAS K</p>
+                <p className={styles.upiId}>UPI: kmuhammedanas24@okicici<br/>MUHAMMED ANAS K</p>
               </div>
               
               <div className={styles.formGroup}>
