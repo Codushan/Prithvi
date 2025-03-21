@@ -98,7 +98,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
   
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value , event: eventData.topic , money: eventData.money}));
+    setFormData(prev => ({ ...prev, [name]: value , event: eventData.topic , money: eventData.money, newfee: eventData.newfee}));
   };
   
   const handleFileChange = (e) => {
