@@ -16,6 +16,7 @@ function RegistrationFormContent() {
   const [isComp, setIsComp] = useState(false);
   const [members, setMembers] = useState([]);
 const [memberName, setMemberName] = useState('');
+const [newFee, setNewFee] = useState('');
 const [showMemberInput, setShowMemberInput] = useState(false);
   const [eventData, setEventData] = useState(null);
   const [formData, setFormData] = useState({
@@ -50,7 +51,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           topic: workshop.title,
           event: 'Workshop',
           description: workshop.description,
-          money: '600', 
+          money: '599', 
           newfee: "249",
           
         };
@@ -66,7 +67,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           event: 'Competition',
           description: competition.description,
           money: competition.regfee || '99',
-          newfee: "149"
+          
         };
         setIsComp(true);
       }
@@ -89,6 +90,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
     
     if (data) {
       setEventData(data);
+      setNewFee(data.newfee)
     } else {
       router.push('/');
     }
@@ -355,12 +357,19 @@ const [showMemberInput, setShowMemberInput] = useState(false);
               </>
             )}
           </div>
-          
-          <div className={styles.registrationFee}>
+          {newFee ? (
+            <div className={styles.registrationFee}>
             <h4>Registration Fee:</h4>
             <p className={styles.money}>₹{money}</p>
             <p>₹{newfee}</p>
           </div>
+          ) : (
+            <div className={styles.registrationFee}>
+              <h4>Registration Fee:</h4>
+              <p className={styles.money1}>₹{money}</p>
+            </div>
+          )}
+          
         </div>
         
        
