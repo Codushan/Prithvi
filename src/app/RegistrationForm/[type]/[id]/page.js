@@ -561,7 +561,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
                     className={styles.qrImage} 
                   />
                 </div>
-                <p className={styles.scanText}>Scan to pay ₹{newfee}</p>
+                <p className={styles.scanText}>Scan to pay ₹{newfee || money}</p>
                 <p className={styles.upiId}>UPI: kmuhammedanas24@okicici<br/>MUHAMMED ANAS K</p>
               </div>
               
