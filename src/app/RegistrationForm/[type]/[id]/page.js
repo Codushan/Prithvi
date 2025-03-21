@@ -52,6 +52,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           description: workshop.description,
           money: '600', 
           newfee: "249",
+          
         };
       }
     } else if (type === 'competition') {
@@ -65,6 +66,7 @@ const [showMemberInput, setShowMemberInput] = useState(false);
           event: 'Competition',
           description: competition.description,
           money: competition.regfee || '99',
+          newfee: "149"
         };
         setIsComp(true);
       }
