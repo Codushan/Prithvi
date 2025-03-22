@@ -82,7 +82,7 @@ const Sponsors = () => {
                     <div className={styles.logoPlaceholder}>
                       <Image src="/adan.png" alt="Sponsor 1" width={300} height={200} />
                     </div>
-                    <h4>ACC cement</h4>
+                    <h4>Adani cement</h4>
                     <h5>Gift Partner</h5>
                   </div>
                 ))}
